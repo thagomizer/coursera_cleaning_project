@@ -6,7 +6,7 @@ if (!file.exists("UCI_HAR_Dataset")) {
   unzip("projectdata.zip", exdir = "UCI_HAR_Dataset")
 }
 
-features <- read.csv("UCI_HAR_Dataset/features.txt", header = FALSE, sep="\n")
+features <- read.csv("UCI_HAR_Dataset/features.txt", header = FALSE, sep="\n")[,1]
 
 xTrain <- read.csv("UCI_HAR_Dataset/train/X_train.txt",
                    sep = "",
@@ -15,7 +15,7 @@ xTest <- read.csv("UCI_HAR_Dataset/test/X_test.txt",
                    sep = "",
                    header = FALSE)
 xData <- rbind(xTrain, xTest)
-names(xData) <- features[,1]
+names(xData) <- features
 
 yTrain <- read.csv("UCI_HAR_Dataset/train/Y_train.txt",
                    sep = "",
@@ -35,5 +35,10 @@ subjectTest <- read.csv("UCI_HAR_Dataset/test/subject_test.txt",
 subjectData <- rbind(subjectTrain, subjectTest)
 names(subjectData) <- c("subject")
 
+# Only select the columns for means or standard deviations 
+meanOrStd <- grepl('mean', features) | grepl('std', features)
+xData <- xData[,which(meanOrStd)]
+
+# Create one massive data set
 data <- cbind(subjectData, yData, xData)
 
