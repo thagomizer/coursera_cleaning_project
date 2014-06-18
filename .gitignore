@@ -6,3 +6,7 @@
 
 # R data files from past sessions
 .Rdata
+
+# Data best extracted not included
+UCI_HAR_Dataset/*
+projectdata.zip
