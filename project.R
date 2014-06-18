@@ -19,6 +19,9 @@ subjectData <- rbind(subjectTrain, subjectTest)
 names(subjectData) <- c("subject")
 
 ## Read in the activity labels
+activityLabels <- read.csv("UCI_HAR_Dataset/activity_labels.txt", header = FALSE, sep="")
+names(activityLabels) <- c("labelKey", "label")
+
 yTrain <- read.csv("UCI_HAR_Dataset/train/Y_train.txt",
                    sep = "",
                    header = FALSE)
@@ -26,7 +29,8 @@ yTest <- read.csv("UCI_HAR_Dataset/test/Y_test.txt",
                    sep = "",
                    header = FALSE)
 yData <- rbind(yTrain, yTest)
-names(yData) <- c("labels")
+names(yData) <- c("labelKey")
+yData <- merge(activityLabels, yData)
 
 ## Read in the measurements
 features <- read.csv("UCI_HAR_Dataset/features.txt", header = FALSE, sep="\n")[,1]
