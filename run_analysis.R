@@ -1,3 +1,5 @@
+require(plyr)
+
 ## Download the zip unless you already have
 if (!file.exists("projectdata.zip")) {
   download.file(url = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", destfile = "projectdata.zip", method = "curl")
@@ -30,7 +32,7 @@ yTest <- read.csv("UCI_HAR_Dataset/test/Y_test.txt",
                    header = FALSE)
 yData <- rbind(yTrain, yTest)
 names(yData) <- c("activityKey")
-yData <- merge(activityLabels, yData)
+yData <- join(yData, activityLabels, by="activityKey")
 
 ## Read in the measurements
 features <- read.csv("UCI_HAR_Dataset/features.txt", header = FALSE, sep="\n")[,1]
@@ -42,16 +44,19 @@ xTest <- read.csv("UCI_HAR_Dataset/test/X_test.txt",
                    sep = "",
                    header = FALSE)
 xData <- rbind(xTrain, xTest)
-names(xData) <- make.names(features)
+names(xData) <- features
 
 ## Only select the columns that are means or standard deviations 
-meanOrStd <- grepl('mean', features) | grepl('std', features)
+meanOrStd <- grepl('mean()', features) | grepl('std()', features)
 xData <- xData[,which(meanOrStd)]
 
 ## Create one massive data set
 data <- cbind(subjectData, yData, xData)
 
-## ## Aggregate by subject and activity
-activity <- data$activity
-subject <- data$subject
-tidyData <- aggregate(data, list(activityKey, subject), FUN=mean, na.rm=TRUE)
+## Aggregate by subject and activity
+tidyData <- aggregate(data[4:ncol(data)],
+                      list(ActivityName=data$activity, SubjectId=data$subject),
+                      FUN=mean)
+                      
+## Output the tidy data
+write.table(tidyData, file="ActivityData_Tidy.csv")
