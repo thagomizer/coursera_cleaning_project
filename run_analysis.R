@@ -20,7 +20,7 @@ names(subjectData) <- c("subject")
 
 ## Read in the activity labels
 activityLabels <- read.csv("UCI_HAR_Dataset/activity_labels.txt", header = FALSE, sep="")
-names(activityLabels) <- c("labelKey", "label")
+names(activityLabels) <- c("activityKey", "activity")
 
 yTrain <- read.csv("UCI_HAR_Dataset/train/Y_train.txt",
                    sep = "",
@@ -29,7 +29,7 @@ yTest <- read.csv("UCI_HAR_Dataset/test/Y_test.txt",
                    sep = "",
                    header = FALSE)
 yData <- rbind(yTrain, yTest)
-names(yData) <- c("labelKey")
+names(yData) <- c("activityKey")
 yData <- merge(activityLabels, yData)
 
 ## Read in the measurements
@@ -42,12 +42,16 @@ xTest <- read.csv("UCI_HAR_Dataset/test/X_test.txt",
                    sep = "",
                    header = FALSE)
 xData <- rbind(xTrain, xTest)
-names(xData) <- features
+names(xData) <- make.names(features)
 
-# Only select the columns that are means or standard deviations 
+## Only select the columns that are means or standard deviations 
 meanOrStd <- grepl('mean', features) | grepl('std', features)
 xData <- xData[,which(meanOrStd)]
 
-# Create one massive data set
+## Create one massive data set
 data <- cbind(subjectData, yData, xData)
 
+## ## Aggregate by subject and activity
+activity <- data$activity
+subject <- data$subject
+tidyData <- aggregate(data, list(activityKey, subject), FUN=mean, na.rm=TRUE)
