@@ -157,28 +157,174 @@ The mean of the jerk for the body component of the acceleration across all three
 **Type:** Numeric
 The standard deviation of the jerk for the body component of the acceleration across all three axes.
 
+## 240 tBodyGyroMag-mean()
+**Type:** Numeric
+The mean of the body component of the gyroscope readings across all three axes. 
 
+## 241 tBodyGyroMag-std()
+**Type:** Numeric
+The standard deviation of the body component of the gyroscope readings across all three axes. 
 
-[39] "240 tBodyGyroMag-mean()"             "241 tBodyGyroMag-std()"             
-[41] "253 tBodyGyroJerkMag-mean()"         "254 tBodyGyroJerkMag-std()"         
-[43] "266 fBodyAcc-mean()-X"               "267 fBodyAcc-mean()-Y"              
-[45] "268 fBodyAcc-mean()-Z"               "269 fBodyAcc-std()-X"               
-[47] "270 fBodyAcc-std()-Y"                "271 fBodyAcc-std()-Z"               
-[49] "294 fBodyAcc-meanFreq()-X"           "295 fBodyAcc-meanFreq()-Y"          
-[51] "296 fBodyAcc-meanFreq()-Z"           "345 fBodyAccJerk-mean()-X"          
-[53] "346 fBodyAccJerk-mean()-Y"           "347 fBodyAccJerk-mean()-Z"          
-[55] "348 fBodyAccJerk-std()-X"            "349 fBodyAccJerk-std()-Y"           
-[57] "350 fBodyAccJerk-std()-Z"            "373 fBodyAccJerk-meanFreq()-X"      
-[59] "374 fBodyAccJerk-meanFreq()-Y"       "375 fBodyAccJerk-meanFreq()-Z"      
-[61] "424 fBodyGyro-mean()-X"              "425 fBodyGyro-mean()-Y"             
-[63] "426 fBodyGyro-mean()-Z"              "427 fBodyGyro-std()-X"              
-[65] "428 fBodyGyro-std()-Y"               "429 fBodyGyro-std()-Z"              
-[67] "452 fBodyGyro-meanFreq()-X"          "453 fBodyGyro-meanFreq()-Y"         
-[69] "454 fBodyGyro-meanFreq()-Z"          "503 fBodyAccMag-mean()"             
-[71] "504 fBodyAccMag-std()"               "513 fBodyAccMag-meanFreq()"         
-[73] "516 fBodyBodyAccJerkMag-mean()"      "517 fBodyBodyAccJerkMag-std()"      
-[75] "526 fBodyBodyAccJerkMag-meanFreq()"  "529 fBodyBodyGyroMag-mean()"        
-[77] "530 fBodyBodyGyroMag-std()"          "539 fBodyBodyGyroMag-meanFreq()"    
-[79] "542 fBodyBodyGyroJerkMag-mean()"     "543 fBodyBodyGyroJerkMag-std()"     
-[81] "552 fBodyBodyGyroJerkMag-meanFreq()"
+## 253 tBodyGyroJerkMag-mean()
+**Type:** Numeric
+The mean of the jerk for the body component of the gyroscope measurements across all three axes.
 
+## 254 tBodyGyroJerkMag-std()
+**Type:** Numeric
+The standard deviation of the jerk for the body component of the gyroscope measurements across all three axes.
+
+## 266 fBodyAcc-mean()-X
+**Type:** Numeric
+The mean body accelerometer measurement on the X-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 267 fBodyAcc-mean()-Y
+**Type:** Numeric
+The mean body accelerometer measurement on the Y-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 268 fBodyAcc-mean()-Z
+**Type:** Numeric
+The mean body accelerometer measurement on the Z-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 269 fBodyAcc-std()-X
+**Type:** Numeric
+The standard deviation in the body accelerometer measurement on the X-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 270 fBodyAcc-std()-Y
+**Type:** Numeric
+The standard deviation in the body accelerometer measurement on the Y-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 271 fBodyAcc-std()-Z
+**Type:** Numeric
+The standard deviation in the body accelerometer measurement on the Z-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 294 fBodyAcc-meanFreq()-X
+**Type:** Numeric
+The weighted average of the frequency components of the body accelerometer measurement on the X-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 295 fBodyAcc-meanFreq()-Y
+**Type:** Numeric
+The weighted average of the frequency components of the body accelerometer measurement on the Y-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 295 fBodyAcc-meanFreq()-Z
+**Type:** Numeric
+The weighted average of the frequency components of the body accelerometer measurement on the Z-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 345 fBodyAccJerk-mean()-X
+**Type:** Numeric
+The mean jerk for the body acceleration on the X-axis for this subject and activity.  An FFT has been done so these measurements are in the frequently domain.
+
+## 346 fBodyAccJerk-mean()-Y
+**Type:** Numeric
+The mean jerk for the body acceleration on the Y-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 347 fBodyAccJerk-mean()-Z
+**Type:** Numeric
+The mean jerk for the body acceleration on the Z-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 348 fBodyAccJerk-std()-X
+**Type:** Numeric
+The standard deviation of the jerk for the body acceleration on the X-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 349 fBodyAccJerk-std()-Y
+**Type:** Numeric
+The standard deviation of the jerk for the body acceleration on the Y-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 350 fBodyAccJerk-std()-Z
+**Type:** Numeric
+The standard deviation of the jerk for the body acceleration on the Z-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 373 fBodyAccJerk-meanFreq()-X
+**Type:** Numeric
+The weighted average jerk for the body acceleration on the X-axis for this subject and activity.  An FFT has been done so these measurements are in the frequently domain.
+
+## 374 fBodyAccJerk-meanFreq()-Y
+**Type:** Numeric
+The weighted average jerk for the body acceleration on the Y-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 375 fBodyAccJerk-meanFreq()-Z
+**Type:** Numeric
+The weighted average jerk for the body acceleration on the Z-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 424 fBodyGyro-mean()-X
+**Type:** Numeric
+The mean body gyroscope measurement on the X-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 425 fBodyGyro-mean()-Y
+**Type:** Numeric
+The mean body gyroscope measurement on the Y-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 426 fBodyGyro-mean()-Z
+**Type:** Numeric
+The mean body gyroscope measurement on the Z-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 427 fBodyGyro-std()-X
+**Type:** Numeric
+The standard deviation in the body gyroscope measurement on the X-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 428 fBodyGyro-std()-Y
+**Type:** Numeric
+The standard deviation in the body gyroscope measurement on the Y-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 429 fBodyGyro-std()-Z
+**Type:** Numeric
+The standard deviation in the body gyroscope measurement on the Z-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 452 fBodyGyro-meanFreq()-X
+**Type:** Numeric
+The weighted average body gyroscope measurement on the X-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 453 fBodyGyro-meanFreq()-Y
+**Type:** Numeric
+The weighted average body gyroscope measurement on the Y-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 454 fBodyGyro-meanFreq()-Z
+**Type:** Numeric
+The weighted average body gyroscope measurement on the Z-axis for this subject and activity. An FFT has been done so these measurements are in the frequently domain.
+
+## 503 fBodyAccMag-mean()
+**Type:** Numeric
+The mean of the body component of the accelerometer readings across all three axes. An FFT has been done so these measurements are in the frequently domain.
+
+## 504 fBodyAccMag-std()
+**Type:** Numeric
+The standard deviation of the body component of the accelerometer readings across all three axes. An FFT has been done so these measurements are in the frequently domain.
+
+## 513 fBodyAccMag-meanFreq()
+**Type:** Numeric
+The weighted average of the body component of the accelerometer readings across all three axes. An FFT has been done so these measurements are in the frequently domain.
+
+## 516 fBodyBodyAccJerkMag-mean()
+**Type:** Numeric
+The mean of the jerk for the body component of the acceleration across all three axes. An FFT has been done so these measurements are in the frequently domain.
+
+## 517 fBodyBodyAccJerkMag-std()
+**Type:** Numeric
+The standard deviation of the jerk for the body component of the acceleration across all three axes. An FFT has been done so these measurements are in the frequently domain.
+
+## 526 fBodyBodyAccJerkMag-meanFreq()
+**Type:** Numeric
+The weighted average of the jerk for the body component of the acceleration across all three axes. An FFT has been done so these measurements are in the frequently domain.
+
+## 529 fBodyBodyGyroMag-mean()
+**Type:** Numeric
+The mean of the body component of the gyroscope readings across all three axes. An FFT has been done so these measurements are in the frequently domain.
+
+## 530 fBodyBodyGyroMag-std()
+**Type:** Numeric
+The standard deviation of the body component of the gyroscope readings across all three axes.  An FFT has been done so these measurements are in the frequently domain.
+
+## 539 fBodyBodyGyroMag-meanFreq()
+**Type:** Numeric
+The weighted average of the body component of the gyroscope readings across all three axes. An FFT has been done so these measurements are in the frequently domain.
+
+## 542 fBodyBodyGyroJerkMag-mean()
+**Type:** Numeric
+The mean of the jerk for the body component of the gyroscope measurements across all three axes. An FFT has been done so these measurements are in the frequently domain.
+
+## 543 fBodyBodyGyroJerkMag-std()
+**Type:** Numeric
+The standard deviation of the jerk for the body component of the gyroscope measurements across all three axes. An FFT has been done so these measurements are in the frequently domain.
+
+## 552 fBodyBodyGyroJerkMag-meanFreq()
+**Type:** Numeric
+The weighted average of the jerk for the body component of the gyroscope measurements across all three axes. An FFT has been done so these measurements are in the frequently domain.
